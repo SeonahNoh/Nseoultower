@@ -4,9 +4,258 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>N서울타워</title>
+    <script>
+        window.onscroll = function() {
+            const mainMenu = document.getElementById("main-logo-menu");
+            if(window.scrollY >= 350) {
+                mainMenu.style.backgroundColor = "red"; 
+                // white로 하고 싶은데 글자색 변경을 못해서 메뉴배경 흰색 못하고 있음
+                mainMenu.style.transition = "all 0.6s"
+                mainMenu.style.zIndex = 1;
+            } else {
+                mainMenu.style.backgroundColor = "transparent";
+                mainMenu.style.transition = "all 0.6s"
+            }
+        }
+    </script>
 </head>
 <body>
+    <div class="wrapper">
+        <header>
+            <div class="main-logo-menu" id="main-logo-menu">
+                <div class="container">
+                    <div class="header-flex-box">
+                        <div class="main-logo">
+                            <a href="#"><img src="images/main_logo.png" alt="메인 로고"></a>
+                        </div> <!-- main-logo -->
+                        <nav class="main-menu">
+                            <ul class="gnb">
+                                <li><a href="#">타워 소개</a></li>
+                                <li><a href="#">타워 이용</a></li>
+                                <li><a href="#">타워 소식</a></li>
+                                <li><a href="#">전망대</a></li>
+                                <li><a href="#">레스토랑&기프트샵</a></li>
+                            </ul>
+                        </nav> <!-- main-menu -->
+                        <div class="search-language">
+                            <div class="input-type-search">
+                                <input type="search" name="search" id="search">
+                                <div class="search-icon">
+                                    <img src="/images/search(white)_icon.png" alt="search 아이콘">
+                                </div>
+                            </div> <!-- input-type-search -->
+                            
+                            <form action="#" method="post">
+                                <select name="language" id="language">
+                                    <option value="Korean" selected>Kr</option>
+                                    <option value="Japanese">Ja</option>
+                                    <option value="English">En</option>
+                                    <option value="Chinese">Cn</option>
+                                </select>
+                            </form>
+                        </div> <!-- search-language -->
+                    </div> <!-- header-flex-box -->
+                </div> <!-- container -->
+
+            </div> <!-- main-logo-menu -->
+            <div class="container">
+                <div class="mian-img-box">
+                    <p>서울의 중심에서 만나는 특별한 순간</p>
+                    <h2>남산서울타워</h2>
+                    <div class="ticket-box"><a href="#">BUY A TICKET</a></div>
+                </div> <!-- mian-img-box -->
+            </div><!-- container -->
+        </header>
+
+        <main>
+            <section class="info-section">
+                <h2>info section</h2>
+                <div class="container">
+                    <div class="info-box">
+                        <div class="info-1">
+                            <img src="images/calendar.png" alt="이용시간 아이콘">
+                            <div class="info-text">
+                                <h3>이용시간</h3>
+                                <p>평일 12:00 ~ 21:00 주말/공휴일 11:00 ~ 21:00</p>
+                            </div>
+                        </div> <!--info-1 -->
+                        <div class="info-2">
+                            <img src="images/dollar.png" alt="이용요금 아이콘">
+                            <div class="info-text">
+                                <h3>이용요금</h3>
+                                <p>대인 16,000원 소인 11,000원</p>
+                            </div>
+                        </div> <!--info-2 -->
+                        <div class="info-3">
+                            <img src="images/people.png" alt="단체관람 아이콘">
+                            <div class="info-text">
+                                <h3 class="no-border">단체관람</h3>
+                                <p>문의 02-6740-4283</p>
+                            </div>
+                        </div> <!--info-3 -->
+                    </div> <!-- info-box -->
+                </div> <!-- container -->
+            </section> <!-- info-section -->
+
+            <section class="guide-section">
+                <h2>이용안내 section</h2>
+                    <div class="container">
+                        <h3>이용 안내</h3>
+                        <p>서울의 대표 랜드마크 N서울타워에서 지금껏 <br>
+                            경험하지 못한 서울의 도심을 경험해보세요!</p>
+            
+                        <div class="guide-box">
+                            <div class="guid">
+                                <img src="images/building.png" alt="층별안내 아이콘">
+                                <a href="#">
+                                    <strong>층별안내</strong>
+                                    <img src="./images/arrow_icon.png" alt="더보기 화살표">
+                                </a>
+                            </div>
+                            <div class="guid">
+                                <img src="images/parking.png" alt="주차장 아이콘">
+                                <a href="#">
+                                    <strong>주차장</strong>
+                                    <img src="./images/arrow_icon.png" alt="더보기 화살표">
+                                </a>
+                            </div>
+                            <div class="guid">
+                                <img src="images/car_icon.png" alt="오시는 길 아이콘">
+                                <a href="#">
+                                    <strong>오시는 길</strong>
+                                    <img src="./images/arrow_icon.png" alt="더보기 화살표">
+                                </a>
+                            </div>
+                        </div> <!-- guide-box -->
+                    </div> <!-- container -->
     
+                    <div class="guide-img">
+                        <img src="./images/tower_night.png" alt="이용안내 이미지">
+                    </div> <!-- guide-img -->
+            </section> <!-- guide-section -->
+
+            <section class="tower-intro-section">
+                <h2>N서울타워소개 section</h2>
+                <div class="container">
+                    <div class="intro-img">
+                        <img src="./images/tower_spring.png" alt="N서울타워소개 이미지">
+                    </div>
+                    <div class="intro-text">
+                        <h3>서울의 상징, 남산서울타워</h3>
+                        <p>‘남산서울타워’는 효율적인 방송전파 송수신과 한국의 전통미를 살린 
+                            관광 전망시설의 기능을 겸비한 국내 최초의 종합전파 탑으로 
+                            방송문화와 관광산업의 미래를 위해 건립되었습니다.
+                            
+                            '남산서울타워'는 지난 40여 년간 대한민국의 
+                            대표적인 관광지이자 서울의 상징물 역할을 해왔습니다.
+                            
+                            ‘남산서울타워’는 서울 시내 전 지역에서 바라보이는 탑의 높이와 
+                            독특한 구조, 형태 등으로 인하여 
+                            내외국인들이 즐겨 찾는 제1의 관광 명소로서의 위치를 확고히 하고 있습니다. </p>
+                    </div>
+                </div> <!-- container -->
+            </section> <!-- tower-intro-section -->
+
+            <section class="tower-restaurant-gift">
+                <h2>전망대/레스토랑/기프트샵 section</h2>
+                <div class="container">
+                    <div class="tower-box">
+                        <img src="./images/tower_fall.png" alt="전망대 이미지">
+                        <div class="section3-text">
+                            <h3>HAN Cook 레스토랑</h3>
+                            <p>해발 400M 남산에서 즐기는 
+                                풍미절정 모던 한우 그릴
+                                HAN Cook Korean grill&dine
+                                2022년 7월 1일 그랜드 오픈을 놓치지 마세요!</p>
+                            <strong><a href="#">> 지금 예약하러 가기</a></strong>
+                        </div>
+                    </div> <!-- tower-box -->
+                    <div class="restaurant-box">
+                        <img src="./images/restaurant.png" alt="레스토랑 이미지">
+                        <div class="section3-text">
+                            <h3>HAN Cook 레스토랑</h3>
+                            <p>해발 400M 남산에서 즐기는 
+                                풍미절정 모던 한우 그릴
+                                HAN Cook Korean grill&dine
+                                2022년 7월 1일 그랜드 오픈을 놓치지 마세요!</p>
+                            <strong><a href="#">> 지금 예약하러 가기</a></strong>
+                        </div>
+                    </div> <!-- restaurant-box -->
+                    <div class="gift-box">
+                        <img src="./images/gift.png" alt="기프트샵 이미지">
+                        <div class="section3-text">
+                            <h3>HAN Cook 레스토랑</h3>
+                            <p>해발 400M 남산에서 즐기는 
+                                풍미절정 모던 한우 그릴
+                                HAN Cook Korean grill&dine
+                                2022년 7월 1일 그랜드 오픈을 놓치지 마세요!</p>
+                            <strong><a href="#">> 지금 예약하러 가기</a></strong>
+                        </div>
+                    </div> <!-- gift-box -->
+                </div> <!-- container -->
+            </section> <!-- tower-restaurant-gift -->
+        </main>
+
+        <footer>
+            <div class="footer-menu">
+                <div class="footermenu-flex-box">
+                    <div class="footermenu">
+                        <a href="#">
+                            <strong>CONTACT US</strong>
+                            <img src="./images/arrow_icon.png" alt="더보기 아이콘">
+                        </a>
+                    </div>
+                    <div class="footermenu">
+                        <a href="#">
+                            <strong>사이트맵</strong>
+                            <img src="./images/arrow_icon.png" alt="더보기 아이콘">
+                        </a>
+                    </div>
+                    <div class="footermenu">
+                        <a href="#">
+                            <strong>공지사항</strong>
+                            <img src="./images/arrow_icon.png" alt="더보기 아이콘">
+                        </a>
+                    </div>
+                </div> <!-- footermenu-flex-box -->    
+            </div> <!-- footer-menu -->
+            
+            <div class="logo-address-security">
+                <div class="container">
+                    <div class="footer-bottom-flex-box">
+                        <h2><img src="./images/footer_logo.png" alt="하단 로고"></h2>
+                        <nav class="footer-bottom-menu">
+                            <ul>
+                                <li><a href="#">이메일 무단수집거부 법적고지 </a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">위치기반서비스 이용약관</a></li>
+                            </ul> 
+                        </nav> <!-- footer-bottom-menu -->
+
+                        <div class="address-copyright">
+                            <p>사업자등록번호: 312-81-42519 대표이사: 김찬호 개인정보보호 책임자: 박정관</p>
+                            <address>주소: 서울특별시 용산구 남산공원길 105(용산동2가) 서울타워 본관 2층   대표전화 : 02-3455-9277, 9288   대표메일 : help_master@cj.net</address>
+                            <p>COPYRIGHT 2014 &copy; CJ Foodville.  ALL RIGHT RESERVED</p>
+                        </div> <!-- address-copyright -->
+
+                    </div> <!-- footer-bottom-flex-box -->
+                </div> <!-- container -->
+            </div> <!-- logo-address-security -->
+
+            <div class="sns">
+                <div class="sns-img">
+                    <a href="#"><img src="./images/facebook_logo.png" alt="페이스북 로고"></a>
+                </div>
+                <div class="sns-img">
+                    <a href="#"><img src="./images/youtube_logo.png" alt="유튜브 로고"></a>
+                </div>
+            </div> <!-- sns -->
+
+        </footer>
+    </div> <!-- wrapper -->
 </body>
-</html>ㄴ
+</html>
