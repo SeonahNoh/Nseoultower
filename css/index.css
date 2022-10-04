@@ -1,1 +1,248 @@
 @charset "utf-8";
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* background-color: pink; */
+}
+
+/* ============ header ============ */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 999px;
+    background: url(/images/main.png) 0 0 no-repeat;
+}
+
+.main-logo-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+}
+
+.header-flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* main logo */
+
+.main-logo {
+    width: 25.593220339%;
+}
+
+.main-logo img {
+    height: 80px;
+}
+
+/* main menu */
+
+.main-menu {
+    width: 52.96610169%;
+    /* background-color: aqua; */
+
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb li > a {
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+/* 검색창, 언어 선택 */
+
+.search-language {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    padding-top: 10px;
+    /* background-color: aqua; */
+}
+
+.search-language input[type=search] {
+    width: 120px;
+    height: 30px;
+    padding-right: 30px;
+    border: 0;
+    background-color: transparent;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-icon {
+    position: absolute;
+    right:60px; top: 18px;
+}
+
+.search-icon img {
+    width: 25px;
+}
+
+.search-language select {
+    width: 45px; height: 45px;
+    border: 0;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.search-language select option {
+    color: black;
+}
+
+/* mian-img-box */
+
+.mian-img-box {
+    position: absolute;
+    top: 500px; 
+    color: white;
+}
+
+.mian-img-box p {
+    font-size: 35px;
+}
+
+.mian-img-box h2 {
+    margin-top: 26px;
+    font-size: 60px;
+    
+}
+
+.ticket-box {
+    width: 264px; 
+    height: 54px;
+    line-height: 54px;
+    margin-top: 66px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.ticket-box a {
+    font-size: 18px;
+    color: white;
+}
+
+
+/* ============ main ============ */
+
+/* info-section */
+
+.info-section {
+    margin-top: 142px;
+}
+
+.info-section > h2 {
+    font-size: 0;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.info-box img {
+    width: 60px;
+}
+
+
+.info-text > h3 {
+    padding-top: 33px;
+    border-right: 1px solid black;
+} 
+
+.info-text .no-border {
+    border-right: 0;
+}
+
+.info-text > p {
+    font: 14px "맑은 고딕";
+    padding-top: 16px;
+}
+
+/* guide-section */
+
+.guide-section {
+    margin-top: 400px;
+    margin-bottom: 1000px;
+}
+
+.guide-section h2 {
+    font-size: 0;
+}
+
+.guide-section h3 {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.guide-section p {
+    font: 14px "맑은 고딕";
+    margin-bottom: 136px;
+    line-height: 1.6em;
+}
+
+.guid {
+    display: flex;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.guid > a {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.guid > a strong {
+    font-size: 20px;
+}
+
+.guid > a img {
+    width: 30px;
+    transform: rotate(90deg);
+
+    transition: all 0.6s;
+}
+
+.guid > a:hover img {
+    transform: rotate(0);
+}
+
+.guide-box img {
+    width: 57px;
+}
+
+.arrow {
+    width: 100px;
+} 
+
+.guide-img {
+    position: absolute;
+    right: 0; top: 1500px;
+}
+
+
+
+/* ============ footer ============ */
+
