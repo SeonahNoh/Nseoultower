@@ -10,59 +10,66 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <title>N서울타워</title>
     <script>
-        // 헤더 드롭다운 풀메뉴
+        // ##### 헤더 드롭다운 풀메뉴 #####
         $(function() {
-            let depth1 = $(".gnb > li");
-            let headerFlexBox = $(".header-flex-box");
+            const depth1 = $('.gnb > li');
+            const mainmenuBox = $('.mainmenu-box');
 
             depth1.mouseenter(function(){
-                headerFlexBox.stop().animate({height:"300px"});
+                mainmenuBox.stop().animate({height:'300px'});
             });
 
             depth1.mouseleave(function(){
-                headerFlexBox.stop().animate({height:"100px"});
+                mainmenuBox.stop().animate({height:'100px'});
             })
         });
 
-        // 헤더 스크롤 시 메뉴 스타일 변경
+        // ##### 헤더 스크롤 시 메뉴 스타일 변경 #####
         $(window).on('scroll', function() {
             if($(window).scrollTop() >= 150) {
-                $('#main-logo-menu').addClass('active');
+                $('.main-logo-menu').addClass('scroll-down');
+                $('.lnb').addClass('scroll-down');
+                $('.lnb li > a').addClass('scroll-down');
+                $('.gnb li > a span').addClass('change-color');
             } else {
-                $('#main-logo-menu').removeClass('active');
-                $('#main-logo-menu').addClass('inactive');
+                $('.main-logo-menu').removeClass('scroll-down');
+                $('.main-logo-menu').addClass('scroll-up');
+                $('.lnb').removeClass('scroll-down');
+                $('.lnb li > a').removeClass('scroll-down');
+                $('.gnb li > a span').removeClass('change-color');
             }
         });
 
-        // 메인 section3 버튼 클릭 시 텍스트 변경
+        // ##### 메인 tower-restaurant-gift section의 버튼 클릭 시 텍스트 변경 ##### 
+        // (-> 나중에 제이쿼리로 통일)
         window.onload = function() {
-            const towerbtn = document.getElementById("tower-btn");
-            const restaurantbtn = document.getElementById("restaurant-btn");
-            const giftbtn = document.getElementById("gift-btn");
+            const towerBtn = document.getElementById("tower-btn");
+            const restaurantBtn = document.getElementById("restaurant-btn");
+            const giftBtn = document.getElementById("gift-btn");
             const slideTitle = document.getElementById("slide-title");
             const slideContents = document.getElementById("slide-contents");
             const goReserve = document.getElementById("go-reserve");
             
-            towerbtn.addEventListener('click', () => {
+            towerBtn.addEventListener('click', () => {
                 slideTitle.innerHTML = "N서울타워 전망대";
                 slideContents.innerHTML = "남산(262m) 정상에 위치한 N서울타워에서는<br>해발 480m 위치에서 서울시를 <br>360도 파노라마 뷰로 조망할 수 있습니다. <br>서울의 도심 전경과 아름다운 야경을 한 눈에 즐기세요!";
                 goReserve.innerHTML = "지금 예약하러 가기";
             }, false);
 
-            restaurantbtn.addEventListener('click', () => {
+            restaurantBtn.addEventListener('click', () => {
                 slideTitle.innerHTML = "HAN Cook 레스토랑";
                 slideContents.innerHTML = "해발 400M 남산에서 즐기는<br>풍미절정 모던 한우 그릴<br>HAN Cook Korean grill&dine<br>2022년 7월 1일 그랜드 오픈을 놓치지 마세요!";
                 goReserve.innerHTML = "지금 예약하러 가기";
             }, false);
 
-            giftbtn.addEventListener('click', () => {
+            giftBtn.addEventListener('click', () => {
                 slideTitle.innerHTML = "N GIFT";
                 slideContents.innerHTML = "N서울타워와 서울, 한국을 추억할 수 있는<br>관광 상품과 커플 아이템, 트랜디한 기념품까지<br>다양한 테마로 구성된 N GIFT에서<br>N서울타워의 추억을 간직하세요.";
                 goReserve.innerHTML = "지금 구매하러 가기";
             }, false);
         }
 
-        // 메인 section3 버튼 클릭 시 이미지 변경
+        // ##### 메인 tower-restaurant-gift section의 버튼 클릭 시 이미지 변경 #####
         $(function(){
             $('#tower-btn').click(function() {
                 $('#slide-img2').addClass('inactive');
@@ -89,16 +96,17 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="main-logo-menu" id="main-logo-menu">
+            <div class="main-logo-menu">
                 <div class="container">
-                    <div class="header-flex-box">
+                    <div class="mainmenu-box">
                         <div class="main-logo">
                             <a href="#"><img src="images/main_logo.png" alt="메인 로고"></a>
                         </div> <!-- main-logo -->
+                        
                         <nav class="main-menu">
-                            <ul class="gnb" id="gnb">
+                            <ul class="gnb">
                                 <li><a href="#"><span>타워 소개</span></a>
-                                    <ul class="lnb"> <!-- 타워 소개 -->
+                                    <ul class="lnb">
                                         <li><a href="#">N서울타워</a></li>
                                         <li><a href="#">제원</a></li>
                                         <li><a href="#">연혁</a></li>
@@ -106,7 +114,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#"><span>타워 이용</span></a>
-                                    <ul class="lnb"> <!-- 타워 이용 -->
+                                    <ul class="lnb"> 
                                         <li><a href="#">층별 안내</a></li>
                                         <li><a href="#">이용 안내</a></li>
                                         <li><a href="#">찾아오시는 길</a></li>
@@ -114,7 +122,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#"><span>타워 소식</span></a>
-                                    <ul class="lnb"> <!-- 타워 소식 -->
+                                    <ul class="lnb"> 
                                         <li><a href="#">공지사항</a></li>
                                         <li><a href="#">이벤트</a></li>
                                         <li><a href="#">관람 후기</a></li>
@@ -122,14 +130,14 @@
                                     </ul>
                                 </li>
                                 <li><a href="#"><span>전망대</span></a>
-                                    <ul class="lnb"> <!-- 전망대 -->
+                                    <ul class="lnb"> 
                                         <li><a href="#">이용 시간</a></li>
                                         <li><a href="#">티켓 구매</a></li>
                                         <li><a href="#">단체관람</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#"><span>레스토랑&기프트샵</span></a>
-                                    <ul class="lnb"> <!-- 레스토랑&기프트샵 -->
+                                    <ul class="lnb"> 
                                         <li><a href="#">레스토랑</a></li>
                                         <li><a href="#">기프트샵</a></li>
                                     </ul>
@@ -138,12 +146,12 @@
                         </nav> <!-- main-menu -->
         
                         <div class="search-language">
-                            <div class="input-type-search">
+                            <div class="search-box">
                                 <input type="search" name="search" id="search">
                                 <div class="search-icon">
                                     <img src="images/search_icon.png" alt="search 아이콘">
                                 </div>
-                            </div> <!-- input-type-search -->
+                            </div> <!-- search-box -->
                             
                             <form action="#" method="post">
                                 <select name="language" id="language">
@@ -154,7 +162,7 @@
                                 </select>
                             </form>
                         </div> <!-- search-language -->
-                    </div> <!-- header-flex-box -->
+                    </div> <!-- mainmenu-box -->
                 </div> <!-- container -->
             </div> <!-- main-logo-menu -->
 
@@ -168,76 +176,76 @@
         </header>
 
         <main>
-            <section class="info-section">
+            <section class="tower-info-section">
                 <h2>info section</h2>
                 <div class="container">
-                    <div class="info-box">
-                        <div class="info-1">
+                    <div class="time-charge-group-box">
+                        <div class="info-time">
                             <img src="images/calendar.png" alt="이용시간 아이콘">
                             <div class="info-text">
                                 <h3>이용시간</h3>
                                 <p>평일 12:00 ~ 21:00 주말/공휴일 11:00 ~ 21:00</p>
                             </div>
-                        </div> <!--info-1 -->
-                        <div class="info-2">
+                        </div> <!--info-time -->
+                        <div class="info-charge">
                             <img src="images/dollar.png" alt="이용요금 아이콘">
                             <div class="info-text">
                                 <h3>이용요금</h3>
                                 <p>대인 16,000원, 소인 11,000원</p>
                             </div>
-                        </div> <!--info-2 -->
-                        <div class="info-3">
+                        </div> <!--info-charge -->
+                        <div class="info-group-people">
                             <img src="images/people.png" alt="단체관람 아이콘">
                             <div class="info-text">
                                 <h3 class="no-border">단체관람</h3>
                                 <p>문의 02-6740-4283</p>
                             </div>
-                        </div> <!--info-3 -->
-                    </div> <!-- info-box -->
+                        </div> <!--info-group-people -->
+                    </div> <!-- time-charge-group-box -->
                 </div> <!-- container -->
-            </section> <!-- info-section -->
+            </section> <!-- tower-info-section -->
 
-            <section class="guide-section">
+            <section class="tower-guide-section">
                 <h2>이용안내 section</h2>
                     <div class="container">
                         <h3>이용 안내</h3>
                         <p>서울의 대표 랜드마크 N서울타워에서 지금껏 <br>
                             경험하지 못한 서울의 도심을 경험해보세요!</p>
             
-                        <div class="guide-box">
-                            <div class="guid-box-content">
+                        <div class="floor-parking-map">
+                            <div class="floor-parking-map-content">
                                 <img src="images/building.png" alt="층별안내 아이콘">
                                 <a href="#">
                                     <strong>층별안내</strong>
                                     <img src="./images/arrow_icon.png" alt="더보기 화살표">
                                 </a>
                             </div>
-                            <div class="guid-box-content">
+                            <div class="floor-parking-map-content">
                                 <img src="images/parking.png" alt="주차장 아이콘">
                                 <a href="#">
                                     <strong>주차장</strong>
                                     <img src="./images/arrow_icon.png" alt="더보기 화살표">
                                 </a>
                             </div>
-                            <div class="guid-box-content">
+                            <div class="floor-parking-map-content">
                                 <img src="images/car_icon.png" alt="오시는 길 아이콘">
                                 <a href="#">
                                     <strong>오시는 길</strong>
                                     <img src="./images/arrow_icon.png" alt="더보기 화살표">
                                 </a>
                             </div>
-                        </div> <!-- guide-box -->
+                        </div> <!-- floor-parking-map -->
                     </div> <!-- container -->
     
                     <div class="guide-section-main-img">
                         <img src="./images/tower_night.png" alt="이용안내 이미지">
                     </div> <!-- guide-section-main-img -->
-            </section> <!-- guide-section -->
+            </section> <!-- tower-guide-section -->
 
             <section class="tower-intro-section">
                 <h2>N서울타워소개 section</h2>
                 <div class="container">
-                    <div class="intro-section-img">
+                    <div class="intro-section-main-img">
                         <img src="./images/tower_spring.png" alt="N서울타워소개 이미지">
                     </div>
                     <div class="intro-text-box">
@@ -266,6 +274,7 @@
                         <button id="restaurant-btn">레스토랑</button>
                         <button id="gift-btn">기프트샵</button>
                     </div>
+                    
                     <div class="slide-img-text-box"> 
                         <div class="slide-imgs">
                             <div id="slide-img1">
@@ -279,59 +288,60 @@
                             </div>
                         </div> <!-- slide-imgs -->
 
-                        <div class="slide-texts"> <!-- slide text box로 바꾸기-->
-                            <div class="slide-title-text">
+                        <div class="slide-texts">
+                            <div class="slide-title-contents">
                                 <h3 id="slide-title">N서울타워 전망대</h3>
-                                <p id="slide-contents">남산(262m) 정상에 위치한 N서울타워에서는<br>
+                                <p id="slide-contents">
+                                    남산(262m) 정상에 위치한 N서울타워에서는<br>
                                     해발 480m 위치에서 서울시를<br>
                                     360도 파노라마 뷰로 조망할 수 있습니다.<br>
                                     서울의 도심 전경과 아름다운 야경을 한 눈에 즐기세요!
-                                </div> <!-- slide-title-text -->
+                                </p>
+                            </div> <!-- slide-title-contents -->
                                 <strong>
-                                    <a href="#"><img src="images/moreview.png" alt="예약하기"> <span id="go-reserve">지금 예약하러 가기</span></a>
+                                    <a href="#"><img src="images/moreview.png" alt=">> 모양 아이콘"> <span id="go-reserve">지금 예약하러 가기</span></a>
                                 </strong>
                         </div> <!-- slide-texts -->  
-
                     </div> <!-- slide-img-text-box -->
                 </div> <!-- container -->
             </section> <!-- tower-restaurant-gift -->
         </main>
 
         <footer>
-            <div class="footer-menu">
+            <div class="contact-sitemap-notice">
                 <div class="footermenu-flex-box">
-                    <div class="footermenu">
+                    <div class="footermenu contact">
                         <a href="#">
                             <strong>CONTACT US</strong>
                             <img src="./images/arrow_icon.png" alt="더보기 아이콘">
                         </a>
                     </div>
-                    <div class="footermenu">
+                    <div class="footermenu sitemap">
                         <a href="#">
                             <strong>사이트맵</strong>
                             <img src="./images/arrow_icon.png" alt="더보기 아이콘">
                         </a>
                     </div>
-                    <div class="footermenu">
+                    <div class="footermenu notice">
                         <a href="#">
                             <strong>공지사항</strong>
                             <img src="./images/arrow_icon.png" alt="더보기 아이콘">
                         </a>
                     </div>
                 </div> <!-- footermenu-flex-box -->    
-            </div> <!-- footer-menu -->
+            </div> <!-- contact-sitemap-notice -->
             
             <div class="logo-address-security">
-                        <h2><img src="./images/footer_logo.png" alt="하단 로고"></h2>
+                        <h2><img src="./images/footer_logo.png" alt="footer logo"></h2>
                         <div class="bottom-menu-address">
-                            <nav class="footer-bottom-menu">
+                            <nav class="terms-of-service-use">
                                 <ul>
                                     <li><a href="#">이메일 무단수집거부 법적고지 </a></li>
                                     <li><a href="#">개인정보처리방침</a></li>
                                     <li><a href="#">이용약관</a></li>
                                     <li><a href="#">위치기반서비스 이용약관</a></li>
                                 </ul> 
-                            </nav> <!-- footer-bottom-menu -->
+                            </nav> <!-- terms-of-service-use -->
                             
                             <div class="address-copyright">
                                 <p>사업자등록번호: 312-81-42519 &nbsp;&nbsp;대표이사: 김찬호 &nbsp;&nbsp;개인정보보호 책임자: 박정관</p> 
@@ -347,7 +357,6 @@
                     <a href="#"><img src="./images/youtube_logo.png" alt="유튜브 로고"></a>
                 </div>
             </div> <!-- sns -->
-
         </footer>
     </div> <!-- wrapper -->
 </body>
