@@ -50,8 +50,8 @@ header {
 .main-menu {
     position: absolute;
     left: 28%; top: 0;
-    padding-top: 10px;
     width: 58%;
+    padding-top: 10px;
 }
 
 /* gnb (헤더 1차 메인메뉴) */

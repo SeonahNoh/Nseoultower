@@ -12,15 +12,12 @@
     <script>
         // ##### 헤더 드롭다운 풀메뉴 #####
         $(function() {
-            const depth1 = $('.gnb > li');
-            const mainmenuBox = $('.mainmenu-box');
-
-            depth1.mouseenter(function(){
-                mainmenuBox.stop().animate({height:'300px'});
+            $('.gnb > li').mouseenter(function(){
+                $('.mainmenu-box').stop().animate({height:'300px'});
             });
 
-            depth1.mouseleave(function(){
-                mainmenuBox.stop().animate({height:'100px'});
+            $('.gnb > li').mouseleave(function(){
+                $('.mainmenu-box').stop().animate({height:'100px'});
             })
         });
 
@@ -236,8 +233,8 @@
                     </div> <!-- container -->
     
                     <div class="guide-section-main-img">
-                        <!-- <img src="./images/tower_night.png" alt="이용안내 이미지"> -->
-                        <img src="./images/winter_img.png" alt="고화질 이미지">
+                        <img src="./images/tower_night.png" alt="이용안내 이미지">
+                        <!-- <img src="./images/winter_img.png" alt="고화질 이미지"> -->
                     </div> <!-- guide-section-main-img -->
             </section> <!-- tower-guide-section -->
 
