@@ -40,7 +40,7 @@
             }
         });
 
-        // ##### 메인 tower-restaurant-gift section의 버튼 클릭 시 텍스트 변경 ##### 
+        // ##### 메인 tower-restaurant-gift 버튼 클릭 시 텍스트 변경 ##### 
         // (-> 나중에 제이쿼리로 통일)
         window.onload = function() {
             const towerBtn = document.getElementById("tower-btn");
@@ -52,7 +52,7 @@
             
             towerBtn.addEventListener('click', () => {
                 slideTitle.innerHTML = "N서울타워 전망대";
-                slideContents.innerHTML = "남산(262m) 정상에 위치한 N서울타워에서는<br>해발 480m 위치에서 서울시를 <br>360도 파노라마 뷰로 조망할 수 있습니다. <br>서울의 도심 전경과 아름다운 야경을 한 눈에 즐기세요!";
+                slideContents.innerHTML = "남산(262m) 정상에 위치한 N서울타워에서는<br>해발 480m 위치에서 서울시를 <br>360도 파노라마 뷰로 조망할 수 있습니다. <br>서울의 도심 전경과 아름다운 야경을 한눈에 즐기세요!";
                 goReserve.innerHTML = "지금 예약하러 가기";
             }, false);
 
@@ -69,7 +69,7 @@
             }, false);
         }
 
-        // ##### 메인 tower-restaurant-gift section의 버튼 클릭 시 이미지 변경 #####
+        // ##### 메인 tower-restaurant-gift 버튼 클릭 시 이미지 변경 #####
         $(function(){
             $('#tower-btn').click(function() {
                 $('#slide-img2').addClass('inactive');
@@ -84,9 +84,8 @@
             });
 
             $('#gift-btn').click(function() {
-                $('#slide-img2').removeClass('inactive');
                 $('#slide-img2').addClass('active');
-
+                $('#slide-img2').removeClass('inactive');
                 $('#slide-img3').addClass('active');
                 $('#slide-img3').removeClass('inactive');
             });
@@ -117,8 +116,8 @@
                                     <ul class="lnb"> 
                                         <li><a href="#">층별 안내</a></li>
                                         <li><a href="#">이용 안내</a></li>
-                                        <li><a href="#">찾아오시는 길</a></li>
                                         <li><a href="#">주차장</a></li>
+                                        <li><a href="#">오시는 길</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#"><span>타워 소식</span></a>
@@ -155,10 +154,9 @@
                             
                             <form action="#" method="post">
                                 <select name="language" id="language">
-                                    <option value="Korean" selected>Kr</option>
-                                    <option value="Japanese">Ja</option>
-                                    <option value="English">En</option>
-                                    <option value="Chinese">Cn</option>
+                                    <option value="Korean" selected>KO</option>
+                                    <option value="English">EN</option>
+                                    <option value="Chinese">CN</option>
                                 </select>
                             </form>
                         </div> <!-- search-language -->
@@ -238,7 +236,8 @@
                     </div> <!-- container -->
     
                     <div class="guide-section-main-img">
-                        <img src="./images/tower_night.png" alt="이용안내 이미지">
+                        <!-- <img src="./images/tower_night.png" alt="이용안내 이미지"> -->
+                        <img src="./images/winter_img.png" alt="고화질 이미지">
                     </div> <!-- guide-section-main-img -->
             </section> <!-- tower-guide-section -->
 
@@ -270,9 +269,9 @@
                 <h2>전망대/레스토랑/기프트샵 section</h2>
                 <div class="container">
                     <div class="btn-box">
-                        <button id="tower-btn">전망대</button>
-                        <button id="restaurant-btn">레스토랑</button>
-                        <button id="gift-btn">기프트샵</button>
+                        <button id="tower-btn">* &nbsp;전망대&nbsp; *</button>
+                        <button id="restaurant-btn">* &nbsp;레스토랑&nbsp; *</button>
+                        <button id="gift-btn">* &nbsp;기프트샵&nbsp; *</button>
                     </div>
                     
                     <div class="slide-img-text-box"> 
@@ -295,7 +294,7 @@
                                     남산(262m) 정상에 위치한 N서울타워에서는<br>
                                     해발 480m 위치에서 서울시를<br>
                                     360도 파노라마 뷰로 조망할 수 있습니다.<br>
-                                    서울의 도심 전경과 아름다운 야경을 한 눈에 즐기세요!
+                                    서울의 도심 전경과 아름다운 야경을 한눈에 즐기세요!
                                 </p>
                             </div> <!-- slide-title-contents -->
                                 <strong>
@@ -353,8 +352,8 @@
 
             <div class="sns">
                 <div class="sns-img">
-                    <a href="#"><img src="./images/facebook_logo.png" alt="페이스북 로고"></a>
-                    <a href="#"><img src="./images/youtube_logo.png" alt="유튜브 로고"></a>
+                    <a href="#"><img src="./images/facebook_logo.png" onmouseover="this.src='./images/fb_logo_gray.png'" onmouseleave="this.src='./images/facebook_logo.png'" alt="페이스북 로고"></a>
+                    <a href="#"><img src="./images/youtube_logo.png" onmouseover="this.src='././images/ytb_logo_gray.png'" onmouseleave="this.src='./images/youtube_logo.png'" alt="유튜브 로고"></a>
                 </div>
             </div> <!-- sns -->
         </footer>

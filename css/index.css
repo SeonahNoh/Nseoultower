@@ -42,12 +42,6 @@ header {
     background-color: transparent;
 } */
 
-
-/* main-logo */
-.main-logo {
-    width: 25.593220339%;
-}
-
 .main-logo img {
     height: 80px;
 }
@@ -57,9 +51,11 @@ header {
     position: absolute;
     left: 28%; top: 0;
     padding-top: 10px;
+    width: 58%;
 }
 
 /* gnb (헤더 1차 메인메뉴) */
+
 .gnb > li {
     float: left;
     line-height: 100px; /* 2차 메뉴 hidden 처리를 위해 .mainmenu-box의 높이값과 맞춤 */
@@ -80,8 +76,7 @@ header {
     position: absolute;
     top: 0;
     display: block;
-    width: 5px; 
-    height: 100%; 
+    width: 5px; height: 100%; 
     content: " ";
     margin-left: -10px; 
     background-color: red;
@@ -89,15 +84,15 @@ header {
     transition: all 0.6s;
 }
 
-.gnb li > a:hover span::before {
-    transform: scale(1.1);
+.gnb li:hover > a span::before {
+    transform: scaleY(1.1);
 }
 
 /* lnb (헤더 2차 메인메뉴) */
 .lnb {
     width: 100%;
     height: 300px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .lnb > li {
@@ -115,8 +110,7 @@ header {
     font-weight: 800;
 }
 
-
-/* ======== 헤더 스크롤 시 메뉴 스타일 변경 */
+/* ======== 헤더 스크롤 시 메뉴 스타일 변경 css */
 
 .main-logo-menu.scroll-down {
     z-index: 9999;
@@ -140,15 +134,15 @@ header {
     color: white;
 }
 
-/* ======== 헤더 스크롤 시 메뉴 스타일 변경 끝 */
+/* 헤더 스크롤 시 메뉴 스타일 변경 css 끝 ======== */
 
 
 /* ======== search-language ======== */
 
 .search-language {
     position: absolute;
-    right: 10px; top: 28px;
-    width: 15%;
+    right: 10px; top: 32px;
+    width: 14%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,9 +151,10 @@ header {
 
 /* search (검색창) */
 .search-box input[type=search] {
-    width: 120px;
+    width: 110px;
     height: 30px;
     border: 0;
+    padding-left: 5px;
     background-color: transparent;
 }
 
@@ -169,20 +164,20 @@ input::-webkit-search-cancel-button {
 
 .search-icon {
     position: absolute;
-    right:63px; top: 19px;
+    right: 62px; top: 19px;
 }
 
 .search-icon img {
-    width: 25px;
+    width: 22px;
 }
 
 /* form select (언어 선택창) */
 .search-language > form select {
-    width: 45px; height: 45px;
+    width: 45px; height: 40px;
     border: 0;
     border-radius: 50%;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     background-color: transparent;
 }
@@ -285,7 +280,7 @@ input::-webkit-search-cancel-button {
     line-height: 1.6em;
 }
 
-/* floor-parking-map-content */
+/* ======= floor-parking-map-content ======= */
 
 .floor-parking-map-content {
     display: flex;
@@ -325,7 +320,7 @@ input::-webkit-search-cancel-button {
 }
 
 
-/* =========== tower-intro-section =========== */
+/* ======= tower-intro-section ======= */
 
 .tower-intro-section {
     margin-top: 300px;    
@@ -362,7 +357,7 @@ input::-webkit-search-cancel-button {
     font: 14px/1.6em "맑은 고딕";
 }
 
-/* ============== tower-restaurant-gift ============== */
+/* ======= tower-restaurant-gift ======= */
 
 .tower-restaurant-gift {
     margin-top: 300px;
@@ -379,14 +374,15 @@ input::-webkit-search-cancel-button {
 }
 
 .btn-box button {
-    width: 100px; height: 30px;
+    width: 110px;
     margin-right: 20px;
+    padding: 5px 10px;
     font-size: 14px;
     cursor: pointer;
-    color: white;
-    border-radius: 2px;
-    border: 1px solid #cacaca;
-    background-color: #cacaca;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: transparent;
 }
 
 .btn-box button:last-child {
@@ -396,8 +392,8 @@ input::-webkit-search-cancel-button {
 .btn-box button:hover {
     color: white;
     font-weight: 700;
-    border: 1px solid #c8d317;
-    background-color: #c8d317;
+    border: 1px solid transparent;
+    background-color: #c6d317be; 
 }
 
 
@@ -491,7 +487,7 @@ input::-webkit-search-cancel-button {
     transition: all 0.6s;
 }
 
-/* ======== 버튼 클릭 시 이미지 변경 css 끝 */
+/* 버튼 클릭 시 이미지 변경 css 끝 ======== */
 
 
 /* ======================== footer ======================== */
@@ -555,7 +551,7 @@ footer {
 }
 
 
-/* ============== logo-address-security ============== */
+/* ======= logo-address-security ======= */
 
 .logo-address-security {
     display: flex;
@@ -582,7 +578,7 @@ footer {
 }
 
 .terms-of-service-use li > a:hover {
-    color: #c8d317;
+   font-weight: bold;
 }
 
 /* ======= address-copyright ======= */
