@@ -188,6 +188,12 @@ input::-webkit-search-cancel-button {
 
 /* ======== main-img-box ======== */
 
+@keyframes fadeText {
+    to {
+        opacity: 1;
+    }
+}
+
 .main-img-box {
     position: absolute;
     top: 500px; 
@@ -196,12 +202,15 @@ input::-webkit-search-cancel-button {
 
 .main-img-box > p {
     font-size: 35px;
+    opacity: 0;
+    animation: fadeText 1s linear forwards;
 }
 
 .main-img-box > h2 {
     margin-top: 26px;
     font-size: 60px;
-    
+    opacity: 0;
+    animation: fadeText 1s 1s linear forwards;
 }
 
 .ticket-box {
@@ -210,6 +219,8 @@ input::-webkit-search-cancel-button {
     margin-top: 66px;
     text-align: center;
     border: 2px solid white;
+    opacity: 0;
+    animation: fadeText 1s 2s linear forwards;
 }
 
 .ticket-box > a {
