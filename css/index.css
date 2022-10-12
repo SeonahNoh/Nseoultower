@@ -11,12 +11,20 @@
 
 /* ======================== header ======================== */
 
+@keyframes fadeImg {
+    to {
+        opacity: 1;
+    }
+}
+
 header {
     position: relative;
     width: 100%;
     height: 999px;
     background: url(../images/main_img.png) 0 0 no-repeat;
     background-size: cover;
+    opacity: 0;
+    animation: fadeImg 1s linear forwards;
 }
 
 /* ======== main-logo-menu ======== */
@@ -203,14 +211,14 @@ input::-webkit-search-cancel-button {
 .main-img-box > p {
     font-size: 35px;
     opacity: 0;
-    animation: fadeText 1s linear forwards;
+    animation: fadeText 2s linear forwards;
 }
 
 .main-img-box > h2 {
     margin-top: 26px;
     font-size: 60px;
     opacity: 0;
-    animation: fadeText 1s 1s linear forwards;
+    animation: fadeText 1s 2s linear forwards;
 }
 
 .ticket-box {
@@ -220,7 +228,7 @@ input::-webkit-search-cancel-button {
     text-align: center;
     border: 2px solid white;
     opacity: 0;
-    animation: fadeText 1s 2s linear forwards;
+    animation: fadeText 2s 2s linear forwards;
 }
 
 .ticket-box > a {
