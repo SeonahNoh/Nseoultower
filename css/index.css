@@ -413,7 +413,7 @@ input::-webkit-search-cancel-button {
     color: white;
     font-weight: 700;
     border: 1px solid transparent;
-    background-color: #c6d317be; 
+    background-color: rgba(198, 211, 23, 0.745); 
 }
 
 
@@ -598,7 +598,7 @@ footer {
 }
 
 .terms-of-service-use li > a:hover {
-   font-weight: bold;
+    font-weight: bold;
 }
 
 /* ======= address-copyright ======= */
