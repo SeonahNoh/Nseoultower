@@ -27,7 +27,7 @@
 <br>
 
 
-# 💛 구현 영상 
+# 💛 완성작 영상 
 https://user-images.githubusercontent.com/114633506/212016762-a241a021-cc31-420d-9558-6773d84b27be.mp4  
 
 <br>
