@@ -27,7 +27,6 @@ $(window).on('scroll', function() {
 });
 
 // ##### 메인 tower-restaurant-gift 버튼 클릭 시 텍스트 변경 ##### 
-// (-> 나중에 제이쿼리로 통일)
 window.onload = function() {
     const towerBtn = document.getElementById("tower-btn");
     const restaurantBtn = document.getElementById("restaurant-btn");

@@ -521,8 +521,6 @@ footer {
 
 .contact-sitemap-notice {
     margin-top: 950px; 
-    /* margin-top값을 많이 안주면 바로 위 메인의 section을 침범함. 
-       메인 section에 들어간 position absolute 때문으로 보임 */
 }
 
 .footermenu-flex-box {
@@ -582,9 +580,12 @@ footer {
     letter-spacing: -0.5px;
 }
 
-.logo-address-security > h2 {
-    margin-top: -23px;
+.logo-address-security > h2 {   
     padding-right: 48px;
+}
+
+.logo-address-security > h2 > img {
+    width: 150px;
 }
 
 /* ======= terms-of-service-use ======= */
